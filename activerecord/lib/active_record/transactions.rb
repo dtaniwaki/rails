@@ -19,7 +19,7 @@ module ActiveRecord
                        scope: [:kind, :name]
 
       mattr_accessor :raise_in_transactional_callbacks, instance_writer: false
-      self.raise_in_transactional_callbacks = false
+      self.raise_in_transactional_callbacks ||= false
     end
 
     # = Active Record Transactions
